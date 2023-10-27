@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Quake Report</string>
+
+    <!-- Placeholder data to display the earthquake list items. -->
+    <!-- Magnitude of earthquake -->
+    <string name="placeholder_earthquake_magnitude">7.2</string>
+    <!-- Place of earthquake -->
+    <string name="placeholder_earthquake_place">San Francisco</string>
+    <!-- Time of earthquake -->
+    <string name="placeholder_earthquake_time">Feb 2, 2016</string>
 </resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- TextView to display magnitude of earthquake. -->
+    <TextView
+        android:id="@+id/earthquake_magnitude"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_earthquake_magnitude"/>
+
+    <!-- TextView to display place of earthquake. -->
+    <TextView
+        android:id="@+id/earthquake_place"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_earthquake_place"/>
+
+    <!-- TextView to display time of earthquake. -->
+    <TextView
+        android:id="@+id/earthquake_time"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_earthquake_time"/>
+</LinearLayout>
