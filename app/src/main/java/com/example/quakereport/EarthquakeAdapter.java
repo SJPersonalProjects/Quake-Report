@@ -10,7 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
@@ -51,19 +53,45 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         //Find the TextView in the list_item.xml layout with the ID earthquake_place.
         TextView earthquakePlace =
                 listItemView.findViewById(R.id.earthquake_place);
-        //Get the earthquake magnitude from the current Earthquake object
+        //Get the earthquake place from the current Earthquake object
         //and set this text on the earthquakePlace TextView.
         earthquakePlace.setText(currentEarthquake.getEarthquakePlace());
 
+        //Find the TextView in the list_item.xml layout with the ID earthquake_date.
+        TextView earthquakeDate = listItemView.findViewById(R.id.earthquake_date);
+
+        //Wrapping UNIX time in milliseconds in date object.
+        Date date = new Date(currentEarthquake.getEarthquakeTime());
+        // Format the date string (i.e. "Mar 3, 1984")
+        String formattedDate = formatDate(date);
+        //Set this text on the earthquakeTime TextView.
+        earthquakeDate.setText(formattedDate);
+
         //Find the TextView in the list_item.xml layout with the ID earthquake_time.
-        TextView earthquakeTime =
-                listItemView.findViewById(R.id.earthquake_time);
-        //Get the earthquake magnitude from the current Earthquake object
-        //and set this text on the earthquakeTime TextView.
-        earthquakeTime.setText(currentEarthquake.getEarthquakeTime());
+        TextView  earthquakeTime = listItemView.findViewById(R.id.earthquake_time);
+        //Format the date string (i.e. "4:30PM)
+        String formattedTime = formatTime(date);
+        //Display the time of the current earthquake in that Textview.
+        earthquakeTime.setText(formattedTime);
 
         //Return the whole list item layout (containing 3 TextView)
         //so that it can be shown in the ListView.
         return listItemView;
+    }
+
+    /**
+     * Return the formatted date string (i.e. "Mar 3, 1984") from a Date object.
+     */
+    private String formatDate(Date date) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM DD, yyyy");
+        return simpleDateFormat.format(date);
+    }
+
+    /**
+     * Return the formatted date string (i.e. "4:30 PM") from a Date object.
+     */
+    private String formatTime(Date date) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("h:mm a");
+        return simpleDateFormat.format(date);
     }
 }

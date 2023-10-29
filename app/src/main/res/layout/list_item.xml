@@ -21,6 +21,14 @@
         android:layout_height="wrap_content"
         android:text="@string/placeholder_earthquake_place"/>
 
+    <!-- TextView to display date of earthquake. -->
+    <TextView
+        android:id="@+id/earthquake_date"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_earthquake_date"/>
+
     <!-- TextView to display time of earthquake. -->
     <TextView
         android:id="@+id/earthquake_time"

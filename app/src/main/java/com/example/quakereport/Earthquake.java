@@ -4,7 +4,7 @@ public class Earthquake {
     //Instance fields.
     private final String mEarthquakeMagnitude;
     private final String mEarthquakePlace;
-    private final String mEarthquakeTime;
+    private final long mEarthquakeTime;
 
     /**
      * Constructs an object of type Earthquake.
@@ -13,7 +13,7 @@ public class Earthquake {
      * @param mEarthquakeTime to store the time of when earthquake occurred.
      */
     public Earthquake(String mEarthquakeMagnitude, String mEarthquakePlace,
-                      String mEarthquakeTime) {
+                      long mEarthquakeTime) {
         this.mEarthquakeMagnitude = mEarthquakeMagnitude;
         this.mEarthquakePlace = mEarthquakePlace;
         this.mEarthquakeTime = mEarthquakeTime;
@@ -39,7 +39,7 @@ public class Earthquake {
      * Time of the current earthquake.
      * @return earthquake time.
      */
-    public String getEarthquakeTime() {
+    public long getEarthquakeTime() {
         return mEarthquakeTime;
     }
 }

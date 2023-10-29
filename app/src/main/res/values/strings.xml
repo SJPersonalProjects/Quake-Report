@@ -6,6 +6,8 @@
     <string name="placeholder_earthquake_magnitude">7.2</string>
     <!-- Place of earthquake -->
     <string name="placeholder_earthquake_place">San Francisco</string>
-    <!-- Time of earthquake -->
-    <string name="placeholder_earthquake_time">Feb 2, 2016</string>
+    <!-- Date of earthquake -->
+    <string name="placeholder_earthquake_date">Feb 2, 2016</string>
+    <!-- Time of the earthquake -->
+    <string name="placeholder_earthquake_time">3:00 PM</string>
 </resources>
