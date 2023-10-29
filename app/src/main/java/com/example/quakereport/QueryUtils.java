@@ -46,7 +46,7 @@ public class QueryUtils {
             JSONArray features = jsonRootObject.getJSONArray("features");
 
             //Iterating over features array.
-            for(int i = 0; i < features.length() - 1; i++) {
+            for(int i = 0; i < features.length(); i++) {
                 JSONObject jsonObject = features.getJSONObject(i);
                 JSONObject properties = jsonObject.getJSONObject("properties");
                 String magnitude = properties.getString("mag");

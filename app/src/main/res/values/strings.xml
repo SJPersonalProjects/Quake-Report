@@ -4,8 +4,12 @@
     <!-- Placeholder data to display the earthquake list items. -->
     <!-- Magnitude of earthquake -->
     <string name="placeholder_earthquake_magnitude">7.2</string>
-    <!-- Place of earthquake -->
-    <string name="placeholder_earthquake_place">San Francisco</string>
+    <!-- location offset for earthquake place. -->
+    <string name="placeholder_earthquake_location_offset">72KM N OF</string>
+    <!-- location primary for earthquake place, -->
+    <string name="placeholder_earthquake_location_primary">San Francisco</string>
+    <!-- Near the for location offset when there's no offset to split. -->
+    <string name="near_the">Near the</string>
     <!-- Date of earthquake -->
     <string name="placeholder_earthquake_date">Feb 2, 2016</string>
     <!-- Time of the earthquake -->

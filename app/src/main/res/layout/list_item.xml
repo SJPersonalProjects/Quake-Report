@@ -13,13 +13,21 @@
         android:layout_height="wrap_content"
         android:text="@string/placeholder_earthquake_magnitude"/>
 
-    <!-- TextView to display place of earthquake. -->
+    <!-- TextView to display offset location of earthquake. -->
     <TextView
-        android:id="@+id/earthquake_place"
+        android:id="@+id/location_offset"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="@string/placeholder_earthquake_place"/>
+        android:text="@string/placeholder_earthquake_location_offset"/>
+
+    <!-- TextView to display primary location of earthquake. -->
+    <TextView
+        android:id="@+id/location_primary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/placeholder_earthquake_location_primary"/>
 
     <!-- TextView to display date of earthquake. -->
     <TextView
