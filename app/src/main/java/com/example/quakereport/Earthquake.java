@@ -2,9 +2,10 @@ package com.example.quakereport;
 
 public class Earthquake {
     //Instance fields.
-    private final String mEarthquakeMagnitude;
+    private final double mEarthquakeMagnitude;
     private final String mEarthquakePlace;
     private final long mEarthquakeTime;
+    private final String mEarthquakeUrl;
 
     /**
      * Constructs an object of type Earthquake.
@@ -12,18 +13,19 @@ public class Earthquake {
      * @param mEarthquakePlace to store place of earthquake.
      * @param mEarthquakeTime to store the time of when earthquake occurred.
      */
-    public Earthquake(String mEarthquakeMagnitude, String mEarthquakePlace,
-                      long mEarthquakeTime) {
+    public Earthquake(double mEarthquakeMagnitude, String mEarthquakePlace,
+                      long mEarthquakeTime, String mEarthquakeUrl) {
         this.mEarthquakeMagnitude = mEarthquakeMagnitude;
         this.mEarthquakePlace = mEarthquakePlace;
         this.mEarthquakeTime = mEarthquakeTime;
+        this.mEarthquakeUrl = mEarthquakeUrl;
     }
 
     /**
      * Magnitude of the current earthquake.
      * @return earthquake magnitude
      */
-    public String getEarthquakeMagnitude() {
+    public double getEarthquakeMagnitude() {
         return mEarthquakeMagnitude;
     }
 
@@ -41,5 +43,13 @@ public class Earthquake {
      */
     public long getEarthquakeTime() {
         return mEarthquakeTime;
+    }
+
+    /**
+     * Url of the current earthquake.
+     * @return earthquake url
+     */
+    public String getEarthquakeUrl() {
+        return mEarthquakeUrl;
     }
 }
