@@ -4,6 +4,8 @@
 
     <!-- Internet permission to fetch list of earthquakes from the USGS server. -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Permission to check the internet connectivity of the user. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
