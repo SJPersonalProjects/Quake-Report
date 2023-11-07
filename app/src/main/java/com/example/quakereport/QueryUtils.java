@@ -109,7 +109,7 @@ public class QueryUtils {
         StringBuilder stringBuilder = new StringBuilder();
         if(inputStream != null) {
             InputStreamReader inputStreamReader = new
-                    InputStreamReader(inputStream, StandardCharsets.UTF_8);
+                    InputStreamReader(inputStream, Charset.forName("UTF-8"));
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             String line = bufferedReader.readLine();
             while(line != null) {
@@ -190,6 +190,8 @@ public class QueryUtils {
      * Query the USGS dataset and return a list of {@link Earthquake} objects.
      */
     public static List<Earthquake> fetchEarthquakeData(String requestURL) {
+        Log.e(LOG_TAG, "fetchEarthquakeData() method");
+
         //Create URL object.
         URL url = createURL(requestURL);
 

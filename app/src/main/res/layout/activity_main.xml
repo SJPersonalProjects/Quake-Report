@@ -9,4 +9,6 @@
     android:dividerHeight="0dp"
     android:scrollbars="none"
     tools:context=".MainActivity">
+
+
 </ListView>
